@@ -45,7 +45,6 @@ public class Configuration {
     }
 
     public String getProperty(String k) {
-        instance.getClass();
         return applicationProperties.getProperty(k);
     }
 }
