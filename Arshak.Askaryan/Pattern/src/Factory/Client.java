@@ -1,16 +1,17 @@
 package Factory;
 
 import Factory.impl.TableComponentFactory;
-import Factory.util.TableComponentType;
+import Factory.interfaces.TableComponent;
+import Factory.util.PageComponent;
+
+import java.util.List;
 
 /**
  * Created by arshak.askaryan on 11/13/2017.
  */
 public class Client {
     public static void main(String[] args) {
-
-        TableComponentFactory.getTableComponent(TableComponentType.DATA_TABLE).render();
-        TableComponentFactory.getTableComponent(TableComponentType.SIMPLE_TABLE).render();
-        TableComponentFactory.getTableComponent(TableComponentType.EDITABLE_TABLE).render();
+        PageComponent dataTableComponentFactory = new PageComponent(new TableComponentFactory());
+        List<TableComponent> tabels = dataTableComponentFactory.createPageTabels(3, "EDITABLE_TABLE");
     }
 }
