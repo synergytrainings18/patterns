@@ -1,7 +1,5 @@
 package factory.api;
 
-import factory.User;
-
 import java.util.List;
 import java.util.Map;
 

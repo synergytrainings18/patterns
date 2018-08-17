@@ -10,6 +10,7 @@ import abstract_factory.api.PhoneNumber;
 public class FrenchAddressFactory implements AddressFactory<FrenchAddress, FranchPhoneNumber> {
 	@Override
 	public FrenchAddress createAddress() {
+
 		return new FrenchAddress();
 	}
 

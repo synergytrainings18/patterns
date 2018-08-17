@@ -1,10 +1,10 @@
 package factory.client;
 
-import factory.User;
+import factory.api.User;
 import factory.Util;
 import factory.api.Entity;
 import factory.api.Notification;
-import factory.api.NotificationResolver;
+import factory.api.NotificationFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,9 +14,9 @@ import java.util.Map;
 /**
  * Created by astghik.mamunc on 8/10/2018.
  */
-public class ProjectNotificationResolver implements NotificationResolver {
+public class ProjectNotificationFactory implements NotificationFactory {
 	@Override
-	public Notification resolveNotificaion(Entity entity, User from) {
+	public Notification resolveNotificaion(Entity entity, User from, String nextState) {
 
 		String systemName = entity.getMetacategotyName();
 
@@ -26,6 +26,7 @@ public class ProjectNotificationResolver implements NotificationResolver {
 		notificationParams.put("activityname", entity.getMetacategotyName());
 		notificationParams.put("username", from.getFirstName());
 		notificationParams.put("projectname", entity.getParent().getName());
+		notificationParams.put("nextState", nextState);
 
 		Notification notification = new Notification(receivers, new ArrayList<>(), entity.getId(), notificationParams);
 		return notification;
