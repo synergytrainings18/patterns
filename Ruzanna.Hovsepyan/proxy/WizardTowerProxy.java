@@ -1,6 +1,6 @@
 package proxy;
 
-public class WizardTowerProxy implements WizardTowerProxy  {
+public class WizardTowerProxy implements WizardTower  {
     private static final Logger LOGGER = LoggerFactory.getLogger(WizardTowerProxy.class);
 
     private static final int NUM_WIZARDS_ALLOWED = 3;
