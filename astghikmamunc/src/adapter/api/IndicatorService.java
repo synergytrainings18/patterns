@@ -1,21 +1,21 @@
 package adapter.api;
 
+import java.util.Map;
+
 /**
  * Created by astghik.mamunc on 9/5/2018.
  */
-public class IndicatorService implements IndicatorServiceIF {
-	@Override
-	public String calculate(String data) {
+public class IndicatorService{
+
+	public Map<String, Object> calculate(IndicatorTrackingIF trackingData) {
 		return null;
 	}
 
-	@Override
-	public boolean update(String data) {
+	public boolean update(IndicatorTrackingIF trackingData) {
 		return false;
 	}
 
-	@Override
-	public boolean insert(String data) {
+	public boolean insert(IndicatorTrackingIF trackingData) {
 		return false;
 	}
 }
