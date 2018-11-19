@@ -8,6 +8,8 @@ public class User {
     private long id;
     private String name;
     private List<NotifiactionType> notifiactionTypes = new ArrayList<NotifiactionType>();
+    private String phoneNumber;
+    private String email;
 
     public enum NotifiactionType {
         APPLIACATION,
@@ -33,5 +35,25 @@ public class User {
 
     public List<NotifiactionType> getNotifiactionTypes() {
         return notifiactionTypes;
+    }
+
+    public void setNotifiactionTypes(List<NotifiactionType> notifiactionTypes) {
+        this.notifiactionTypes = notifiactionTypes;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
